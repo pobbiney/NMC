@@ -5,7 +5,7 @@ use App\Http\Controllers\Authentication\AuthenticationController;
 use App\Http\Controllers\Dashboard\DashboardController;
 use App\Http\Controllers\UserManagement\UserManagementController;
 use App\Http\Controllers\Staff\StaffController;
-use App\Http\Controllers\Setup\SetupController;
+use App\Http\Controllers\WebsiteManager\WebsiteController;
 
 Route::get('/',[AuthenticationController::class,'index']);
 Route::get('login',[AuthenticationController::class,'index'])->name('login');
@@ -48,27 +48,13 @@ Route::get('edit-staff/{staff_id}',[StaffController::class,'editStaffView'])->na
 Route::post('edit-staff-process/{staff_id}',[StaffController::class,'ediStaff'])->name('edit-staff-process');
 /*Staff Management*/
 
-/*Setup  */
-Route::get('ServiceProvider',[SetupController::class,'viewServiceProvider'])->name('ServiceProvider');
-Route::post('add-service-provider-process',[SetupController::class,'addServiceProvider'])->name('add-service-provider-process');
-Route::get('edit-ServiceProvider/{id}',[SetupController::class,'viewEditServiceProvider'])->name('edit-ServiceProvider');
-Route::post('edit-service-provider-process/{id}',[SetupController::class,'editServiceProvider'])->name('edit-service-provider-process');
-Route::get('Packages',[SetupController::class,'packagesView'])->name('Packages');
-Route::get('service-provider-id/{id}',[SetupController::class,'getServiceProvidersID'])->name('service-provider-id');
-Route::post('add-packages-process',[SetupController::class,'addPackages'])->name('add-packages-process');
-Route::post('add-agent-packages-process',[SetupController::class,'addAgentPackages'])->name('add-agent-packages-process');
-Route::post('edit-packages-process',[SetupController::class,'editPackages'])->name('edit-packages-process');
-Route::post('edit-agent-packages-process',[SetupController::class,'editAgentPackages'])->name('edit-agent-packages-process');
-Route::get('package-id/{id}',[SetupController::class,'getPackageID'])->name('package-id');
-Route::get('agent-package-id/{id}',[SetupController::class,'getAgentPackageID'])->name('agent-package-id');
-Route::get('Packages/{id}/delete', [SetupController::class, 'destroy']) ;
-Route::get('AgentPackage',[SetupController::class,'viewAgentPackage'])->name('AgentPackage');
-Route::get('Agent-Packages/{id}/delete', [SetupController::class, 'destroyagent']) ;
-Route::post('add-agent-plan-process',[SetupController::class,'addAgentPlan'])->name('add-agent-plan-process');
-
-Route::post('edit-agentplan-process/{id}',[SetupController::class,'editAgentPlan'])->name('edit-agentplan-process');
-Route::get('edit-agentplan/{id}',[SetupController::class,'editAgentPlanView'])->name('edit-agentplan');
-
-Route::get('AgentPlan',[SetupController::class,'viewAgentPlan'])->name('AgentPlan');
-
+ 
 /*End Setup*/
+
+/* Website Manager */
+Route::get('Board-Members',[WebsiteController::class,'addBoarMembersView'])->name('Board-Members');
+Route::post('add-board-title-process',[WebsiteController::class,'addBoardTitle'])->name('add-board-title-process');
+Route::get('edit-board-category/{id}',[WebsiteController::class,'editBoarMembersView'])->name('edit-board-category');
+Route::post('edit-board-title-process/{id}',[WebsiteController::class,'editBoardTitle'])->name('edit-board-title-process');
+
+/*End Website Manager */

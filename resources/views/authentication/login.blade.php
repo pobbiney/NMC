@@ -8,14 +8,14 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="description" content="EDNAKDATA HUB Environmental Protection Agency">
-		<meta name="keywords" content="EDNAKDATA HUB  Protection Agency">
+		<meta name="description" content="Nursing And Midwifery Council">
+		<meta name="keywords" content="Nursing And Midwifery Council">
 		<meta name="author" content="Speedlines Technology ">
 		<meta name="robots" content="index, follow">
-		<title>EDNAKDATA HUB | Login</title>
+		<title>NMC | Login</title>
 		
 		<!-- Favicon -->
-        <link rel="shortcut icon" type="image/x-icon" href="{{asset('assets/img/fav.png')}}">
+        <link rel="shortcut icon" type="image/x-icon" href="{{asset('assets/img/mda_1648462457.png')}}">
 
 		<!-- Apple Touch Icon -->
 		<link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
@@ -40,89 +40,82 @@
 			<div class="whirly-loader"> </div>
 		</div>
 	
-		<!-- Main Wrapper -->
+			<!-- Main Wrapper -->
         <div class="main-wrapper">
 			<div class="account-content">
-				<div class="row login-wrapper m-0">
-                    <div class="col-lg-6 p-0">
-                        <div class="login-content">
-                            <form action="{{ route('authentication-process') }}" method="POST">
-                                 <div style="display: flex; justify-content: center; align-items: center;">
-                                    <img src="{{ asset('assets/img/logo-edk.png') }}" alt="img" width="350px">
-                                </div><br/>
-                                <div class="login-userset">
-                                    <div class="login-logo">
-                                   
-                                    </div>
-                                <a href="#" class="login-logo logo-white">
-                                    <img src="{{asset('assets/img/logo-edk.png')}}"  alt="Img">
-                                </a>
-
-                                @if (session('login_error_message'))
-                                    <p class="alert alert-danger" align="center">{{session('login_error_message')}}</p>
-                                @endif
-                                @csrf
-                                <div class="login-userheading">
-                                    <h3>Sign In</h3>
-                                    <h4>Access the  EDNAKDATA HUB dashboard using your email and password.</h4>
+				<div class="login-wrapper login-new">
+                    <div class="row w-100">
+                        <div class="col-lg-5 mx-auto">
+                            <div class="login-content user-login">
+                                <img src="assets/img/mda_1648462457.png" alt="img" width="300px">
+                                <div class="login-logo">
+                                    
+                                    <a href="#" class="login-logo logo-white">
+                                        <img src="assets/img/mda_1648462457.png"  alt="Img">
+                                    </a>
                                 </div>
-                                <div class="mb-3">
-                                        <label class="form-label">Email Address</label>
-                                        <div class="input-group">
-                                            <input type="text" value="" class="form-control border-end-0" name="email">
-                                            
-                                            <span class="input-group-text border-start-0">
-                                                <i class="ti ti-mail"></i>
-                                            
-                                        </div>
-                                        </span>
-                                             @error('email')
-                                                <small style="color:red;">{{$message}}</small>
-                                             @enderror
-                                    </div>
-                                    <div class="mb-3">
-                                        <label class="form-label">Password</label>
-                                        <div class="pass-group">
-                                            <input type="password" class="pass-input form-control" name="password">
-                                            <span class="ti toggle-password ti-eye-off text-gray-9"></span>
-                                             @error('password')
-                                              <small style="color:red;">{{$message}}</small>
-                                            @enderror
-                                        </div>
-                                    </div>
-                                <div class="form-login authentication-check">
-                                    <div class="row">
-                                        <div class="col-6">
-                                            <div class="custom-control custom-checkbox">
-                                                <label class="checkboxs ps-4 mb-0 pb-0 line-height-1">
-                                                    <input type="checkbox">
-                                                    <span class="checkmarks"></span>Remember me
-                                                </label>
+                                <form enctype="multipart/form-data" action="{{ route('authentication-process') }}" method="POST">
+                                    @csrf
+                                    <div class="card">
+                                        <div class="card-body p-5">
+                                            @if (session('login_error_message'))
+                                                <p class="alert alert-danger" align="center">{{session('login_error_message')}}</p>
+                                            @endif
+                                            @csrf
+                                            <div class="login-userheading">
+                                                <h3>Sign In</h3>
+                                                <h4>Access the Admin panel using your email and password.</h4>
                                             </div>
-                                        </div>
-                                        <div class="col-6 text-end">
-                                            <a class="forgot-link" href="forgot-password-2.html">Forgot Password?</a>
+                                            <div class="mb-3">
+                                                <label class="form-label">Email <span class="text-danger"> *</span></label>
+                                                <div class="input-group">
+                                                    <input type="text" name="email" class="form-control border-end-0">
+                                                    <span class="input-group-text border-start-0">
+                                                        <i class="ti ti-mail"></i>
+                                                    </span>
+                                                    @error('email')
+                                                        <small style="color:red;">{{$message}}</small>
+                                                    @enderror
+                                                </div>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label class="form-label">Password <span class="text-danger"> *</span></label>
+                                                <div class="pass-group">
+                                                    <input type="password" name="password" class="pass-input form-control">
+                                                    <span class="ti toggle-password ti-eye-off text-gray-9"></span>
+                                                    @error('email')
+                                                        <small style="color:red;">{{$message}}</small>
+                                                    @enderror
+                                                </div>
+                                            </div>
+                                            <div class="form-login authentication-check">
+                                                <div class="row">
+                                                    <div class="col-12 d-flex align-items-center justify-content-between">
+                                                        <div class="custom-control custom-checkbox">
+                                                            <label class="checkboxs ps-4 mb-0 pb-0 line-height-1 fs-16 text-gray-6">
+                                                                <input type="checkbox" class="form-control">
+                                                                <span class="checkmarks"></span>Remember me
+                                                            </label>
+                                                        </div>
+                                                        <div class="text-end">
+                                                            <a class="text-orange fs-16 fw-medium" href="forgot-password.html">Forgot Password?</a>
+                                                        </div>
+                                                    </div>                                    
+                                                </div>
+                                            </div>
+                                            <div class="form-login">
+                                                <button type="submit" class="btn btn-primary w-100">Sign In</button>
+                                            </div>
+                                    
+                                            
                                         </div>
                                     </div>
-                                </div>
-                                <div class="form-login">
-                                    <button type="submit" class="btn btn-login"  style="background: #6e12d3;border:1px solid #6e12d3">Sign In</button>
-                                </div>
-                              
-                                <div class="form-sociallink">
-                                     
-                                    <div class="my-4 d-flex justify-content-center align-items-center copyright-text">
-                                        <p>Copyright &copy; 2025 Indexcom Ltd</p>
-                                    </div>
-                                </div>
+                                </form>
                             </div>
-                            </form>
+                            <div class="my-4 d-flex justify-content-center align-items-center copyright-text">
+                                <p>Copyright &copy; 2025 NMC</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-lg-6 p-0" style="background: white">
-                        
-                            <img src="assets/img/airtime.png" alt="img">
-                        
                     </div>
                 </div>
 			</div>

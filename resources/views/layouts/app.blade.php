@@ -25,16 +25,17 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="EDNAKDATA HUB .">
-	<meta name="keywords" content="EDNAKDATA HUB ">
+	<meta name="description" content="Nursing And Midwifery Council .">
+	<meta name="keywords" content="Nursing And Midwifery Council .">
+ 
 	<meta name="author" content="Speedlines Technology ">
 	<meta name="robots" content="index, follow">
-	<title>EDNAKDATA HUB</title>
+	<title>Nursing And Midwifery Council  </title>
 
 	<script src="{{asset('assets/js/theme-script.js')}}" type="da66958c310097099013dd7e-text/javascript"></script>	
 
 	<!-- Favicon -->
-	<link rel="shortcut icon" type="image/x-icon" href="{{asset('assets/img/fav.png')}}">
+	<link rel="shortcut icon" type="image/x-icon" href="{{asset('assets/img/mda_1648462457.png')}}">
 
 	<!-- Apple Touch Icon -->
 	<link rel="apple-touch-icon" sizes="180x180" href="{{asset('assets/img/apple-touch-icon.png')}}">
@@ -99,13 +100,13 @@
 				<!-- Logo -->
 				<div class="header-left active">
 					<a href="{{route('dashboard')}}" class="logo logo-normal">
-						<img src="{{asset('assets/img/logo-edk.png')}}" alt="Img">
+						<img src="{{asset('assets/img/mda_1648462457.png')}}" alt="Img">
 					</a>
 					<a href="{{route('dashboard')}}" class="logo logo-white">
-						<img src="{{asset('assets/img/logo-edk.png')}}" alt="Img">
+						<img src="{{asset('assets/img/mda_1648462457.png')}}" alt="Img">
 					</a>
 					<a href="{{route('dashboard')}}" class="logo-small">
-						<img src="{{asset('assets/img/favicon.png')}}" alt="Img">
+						<img src="{{asset('assets/img/mda_1648462457.png')}}" alt="Img">
 					</a>
 				</div>
 				<!-- /Logo -->
@@ -291,13 +292,13 @@
 			<!-- Logo -->
 			<div class="sidebar-logo active">
 				<a href="{{route('dashboard')}}" class="logo logo-normal">
-					<img src="{{asset('assets/img/logo-edk.png')}}" alt="Img">
+					<img src="{{asset('assets/img/mda_1648462457.png')}}" alt="Img">
 				</a>
 				<a href="{{route('dashboard')}}" class="logo logo-white">
-					<img src="{{asset('assets/img/logo-edk.png')}}" alt="Img">
+					<img src="{{asset('assets/img/mda_1648462457.png')}}" alt="Img">
 				</a>
 				<a href="{{route('dashboard')}}" class="logo-small">
-					<img src="{{asset('assets/img/fav.png')}}" alt="Img">
+					<img src="{{asset('assets/img/mda_1648462457.png')}}" alt="Img">
 				</a>
 				<a id="toggle_btn" href="javascript:void(0);">
 					<i data-feather="chevrons-left" class="feather-16"></i>
@@ -393,13 +394,13 @@
 					<!-- Logo -->
 					<div class="sidebar-logo">
 						<a href="{{route('dashboard')}}" class="logo logo-normal">
-							<img src="assets/img/Epermit-logo.png" alt="Img">
+							<img src="assets/img/mda_1648462457.png" alt="Img">
 						</a>
 						<a href="{{route('dashboard')}}" class="logo logo-white">
-							<img src="assets/imgEpermit-logo.png" alt="Img">
+							<img src="assets/img/mda_1648462457.png" alt="Img">
 						</a>
 						<a href="{{route('dashboard')}}" class="logo-small">
-							<img src="assets/img/favlogo.png" alt="Img">
+							<img src="assets/img/mda_1648462457.png" alt="Img">
 						</a>
 					</div>
 					 
@@ -447,7 +448,7 @@
 				
 	 
 			<div class="copyright-footer d-flex align-items-center justify-content-between border-top bg-white gap-3 flex-wrap">
-				<p class="fs-13 text-gray-9 mb-0"> 2025 &copy; EDNAKDATA HUB</p>
+				<p class="fs-13 text-gray-9 mb-0"> 2025 &copy; NMC    </p>
 				<p>Designed & Developed By <a href="javascript:void(0);" class="link-primary">Speedlines Technology </a></p>
 			</div>
 		</div>
