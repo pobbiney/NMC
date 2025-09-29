@@ -1,0 +1,19 @@
+name: NMC Deployment
+
+on: 'push'
+jobs:
+  web-deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - name: Get latest code
+      uses: actions/checkout@v4
+
+    - name: Sync files to server
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      with:
+        server: ftp.goblust.com
+        username: nmc@nmc.goblust.com
+        password: 6A3Sd{)pI%[H?rg!
+
+        
