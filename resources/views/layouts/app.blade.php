@@ -79,7 +79,10 @@
 	<!-- Main CSS -->
 	<link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
 	<link rel="stylesheet" href="{{asset('assets/css/datatable.css')}}">
- 
+    <!-- Quill CSS -->
+    	<link rel="stylesheet" href="{{asset('assets/plugins/quill/quill.core.css')}}">
+    	<link rel="stylesheet" href="{{asset('assets/plugins/quill/quill.snow.css')}}"> 
+
 	@yield('css')
  
  
@@ -179,7 +182,7 @@
 										<a href="activities.html">
 											<div class="media d-flex">
 												<span class="avatar flex-shrink-0">
-													<img alt="Img" src="assets/img/profiles/avatar-13.jpg">
+													<img alt="Img" src="{{asset('assets/img/profiles/avatar-13.jpg')}}">
 												</span>
 												<div class="flex-grow-1">
 													<p class="noti-details"><span class="noti-title">James Kirwin</span> confirmed his order.  Order No: #78901.Estimated delivery: 2 days</p>
@@ -192,7 +195,7 @@
 										<a href="activities.html">
 											<div class="media d-flex">
 												<span class="avatar flex-shrink-0">
-													<img alt="Img" src="assets/img/profiles/avatar-03.jpg">
+													<img alt="Img" src="{{asset('assets/img/profiles/avatar-03.jpg')}}">
 												</span>
 												<div class="flex-grow-1">
 													<p class="noti-details"><span class="noti-title">Leo Kelly</span> cancelled his order scheduled for  17 Jan 2025</p>
@@ -205,7 +208,7 @@
 										<a href="activities.html" class="recent-msg">
 											<div class="media d-flex">
 												<span class="avatar flex-shrink-0">
-													<img alt="Img" src="assets/img/profiles/avatar-17.jpg">
+													<img alt="Img" src="{{asset('assets/img/profiles/avatar-17.jpg')}}">
 												</span>
 												<div class="flex-grow-1">
 													<p class="noti-details">Payment of $50 received for Order #67890 from <span class="noti-title">Antonio Engle</span></p>
@@ -218,7 +221,7 @@
 										<a href="activities.html" class="recent-msg">
 											<div class="media d-flex">
 												<span class="avatar flex-shrink-0">
-													<img alt="Img" src="assets/img/profiles/avatar-02.jpg">
+													<img alt="Img" src="{{asset('assets/img/profiles/avatar-02.jpg')}}">
 												</span>
 												<div class="flex-grow-1">
 													<p class="noti-details"><span class="noti-title">Andrea</span> confirmed his order.  Order No: #73401.Estimated delivery: 3 days</p>
@@ -244,7 +247,7 @@
 						<a href="javascript:void(0);" class="nav-link userset" data-bs-toggle="dropdown">
 							<span class="user-info p-0">
 								<span class="user-letter">
-									<img src="assets/img/profiles/avator1.jpg" alt="Img" class="img-fluid">
+									<img src="{{asset('assets/img/profiles/avator1.jpg')}}" alt="Img" class="img-fluid">
 								</span>
 							</span>
 						</a>
@@ -354,7 +357,7 @@
 						 @foreach ($parents as $parent)
 						<li class="submenu" class="@if ($pageName == $parent->page_id) active  @endif">
 							
-							<a href="javascript:void(0);"><i class="{{$parent->link_image}} fs-16 me-2"></i><span> 
+							<a href="javascript:void(0);"><i class="{{$parent->link_image}} fs-16 me-2"></i><span> {{$parent->link_name}}
 								</span> <span class="menu-arrow"></span></a>
 							<ul>
 								 @foreach ($child as $sub)
@@ -394,13 +397,13 @@
 					<!-- Logo -->
 					<div class="sidebar-logo">
 						<a href="{{route('dashboard')}}" class="logo logo-normal">
-							<img src="assets/img/mda_1648462457.png" alt="Img">
+							<img src="{{asset('assets/img/mda_1648462457.png')}}" alt="Img">
 						</a>
 						<a href="{{route('dashboard')}}" class="logo logo-white">
-							<img src="assets/img/mda_1648462457.png" alt="Img">
+							<img src="{{asset('assets/img/mda_1648462457.png')}}" alt="Img">
 						</a>
 						<a href="{{route('dashboard')}}" class="logo-small">
-							<img src="assets/img/mda_1648462457.png" alt="Img">
+							<img src="{{asset('assets/img/mda_1648462457.png')}}" alt="Img">
 						</a>
 					</div>
 					 
@@ -408,7 +411,7 @@
 					<div class="sidebar-scroll">
 						<div class="text-center rounded bg-light p-3 mb-3 border">
 							<div class="avatar avatar-lg online mb-3">
-								<img src="assets/img/customer/customer15.jpg" alt="Img" class="img-fluid rounded-circle">
+								<img src="{{asset('assets/img/customer/customer15.jpg')}}" alt="Img" class="img-fluid rounded-circle">
 							</div>
 							<h6 class="fs-14 fw-bold mb-1">{{auth()->user()->name}}</h6>
 							<p class="fs-12 mb-0">{{auth()->user()->getUserCategory()}}</p>
@@ -499,6 +502,12 @@
 
         <!-- Feather Icon JS -->
     <script src="{{asset('assets/js/feather.min.js')}}" type="3bb0267ac42e367a8a8ce41d-text/javascript"></script>
+
+ 
+	<!-- Quill JS -->
+	<script src="{{asset('assets/plugins/quill/quill.min.js')}}" type="2fdd6197216fbcd5acadad8b-text/javascript"></script>
+
+	 
 
 	<!-- Custom JS -->
 	<script src="{{asset('assets/js/theme-colorpicker.js')}}" type="da66958c310097099013dd7e-text/javascript"></script>

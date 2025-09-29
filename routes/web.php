@@ -56,5 +56,11 @@ Route::get('Board-Members',[WebsiteController::class,'addBoarMembersView'])->nam
 Route::post('add-board-title-process',[WebsiteController::class,'addBoardTitle'])->name('add-board-title-process');
 Route::get('edit-board-category/{id}',[WebsiteController::class,'editBoarMembersView'])->name('edit-board-category');
 Route::post('edit-board-title-process/{id}',[WebsiteController::class,'editBoardTitle'])->name('edit-board-title-process');
+Route::get('Governing-Board',[WebsiteController::class,'GoverningBoardView'])->name('Governing-Board');
+Route::post('add-board-member-process',[WebsiteController::class,'addBoardMember'])->name('add-board-member-process');
+Route::get('Governing-Board/{id}/delete', [WebsiteController::class, 'destroymember']);
+Route::get('edit-board-member/{id}',[WebsiteController::class,'editBoarMembersprofView'])->name('edit-board-member');
+Route::post('edit-board-member-process/{id}',[WebsiteController::class,'editBoardMember'])->name('edit-board-member-process');
+Route::get('view-board-member/{id}',[WebsiteController::class,'BoarMembersprofView'])->name('view-board-member');
 
 /*End Website Manager */
